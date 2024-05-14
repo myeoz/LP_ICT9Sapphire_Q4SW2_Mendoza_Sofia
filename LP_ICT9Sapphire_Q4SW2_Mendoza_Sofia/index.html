@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Mendoza SW2</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+		<style type="text/css">
+			body{
+				background-image: url("bg.jpg");
+				color: lightgrey;
+			}
+			.container{
+				width: 1300px;
+				height:860px;
+				margin: 50px;
+				background-color: #172D52;
+				align-content: center;
+				margin: 50px auto;
+			}
+			img{
+				width: 300px;
+				height: 400px;
+			}
+			div{
+				font-family: Comic Sans MS;
+				font-size: 20px;
+			}
+
+		</style>
+	</head>
+	<body align="center">
+		<div class="container" align="center">
+			<h2>USE THE CALCULATOR TO CALCULATE FOR THE ANSWER USING THE OPERATIONS!</h2>
+			<img src="calc.png">
+			<form>
+				Enter 1st Number: <input type="text" id="num1">
+				<br>
+				<br>
+				Enter 2nd Number: <input type="text" id="num2">
+				<br>
+				<br>
+				<button type="Submit" onclick="plus()" class="btn btn-info btn-lg">SUM</button>
+				<button type="Submit" onclick="minus()" class="btn btn-info btn-lg">DIFFERENCE</button>
+				<button type="Submit" onclick="multi()" class="btn btn-info btn-lg">PRODUCT</button>
+				<button type="Submit" onclick="divide()" class="btn btn-info btn-lg">QUOTIENT</button>
+			</form>
+			<br>
+			<br>
+			<p>Sources:</p><a href="https://www.pinterest.ph/pin/719450109214973830/">calculator icon</a>
+		</div>
+		
+
+			<script>
+				function plus(){
+					var num1 = document.getElementById("num1").value;
+					var num2 = document.getElementById("num2").value;
+						var sum = Number(num1) + Number(num2);
+					window.alert("The sum is: "+ sum)
+				}
+				function minus(){
+					var num1 = document.getElementById("num1").value;
+					var num2 = document.getElementById("num2").value;
+						var difference = Number(num1) - Number(num2);
+					window.alert("The difference is: "+ difference)
+				}
+				function multi(){
+					var num1 = document.getElementById("num1").value;
+					var num2 = document.getElementById("num2").value;
+						var product = Number(num1) * Number(num2);
+					window.alert("The product is: "+ product)
+				}
+				function divide(){
+					var num1 = document.getElementById("num1").value;
+					var num2 = document.getElementById("num2").value;
+						var quotient = Number(num1) / Number(num2);
+					window.alert("The quotient is: "+ quotient)
+				}
+			</script>
+	</body>
+</html>
